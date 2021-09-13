@@ -3,8 +3,8 @@ package launcher;
 import factory.IAbstractFactoryTarjetas;
 import factory.MastercardFactory;
 import factory.VisaFactory;
-import products.ITarjeta;
-import products.TarjetaCredito;
+import producto.ITarjeta;
+import producto.TarjetaCredito;
 
 public class Launcher {
   

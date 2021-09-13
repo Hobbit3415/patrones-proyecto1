@@ -1,6 +1,6 @@
 package factory;
 
-import products.*;
+import producto.*;
 
 public class MastercardFactory implements IAbstractFactoryTarjetas {
   @Override

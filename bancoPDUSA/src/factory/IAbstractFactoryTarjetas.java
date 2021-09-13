@@ -1,6 +1,6 @@
 package factory;
 
-import products.TarjetaCredito;
+import producto.TarjetaCredito;
 
 public interface IAbstractFactoryTarjetas {
 

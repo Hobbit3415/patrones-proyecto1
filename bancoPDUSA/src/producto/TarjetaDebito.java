@@ -1,4 +1,4 @@
-package products;
+package producto;
 
 public class TarjetaDebito implements ITarjeta {
   private String titular = "";
