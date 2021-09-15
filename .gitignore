@@ -1,4 +1,7 @@
 .vscode/
 lib/
-bin/
 README.md
+.settings/
+bin/
+.classpath
+.project
