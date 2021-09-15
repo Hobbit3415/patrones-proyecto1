@@ -1,5 +1,18 @@
 .vscode/
 lib/
+<<<<<<< HEAD
+<<<<<<< HEAD
+README.md
+bin/
+=======
 bin/
 README.md
+>>>>>>> emmanuel
+=======
+bin/
+README.md
+<<<<<<< HEAD
 patrones-proyecto1.iml
+=======
+>>>>>>> alexis
+>>>>>>> c55de8241b7f3c0355d05db940665ad7bc6e426b
