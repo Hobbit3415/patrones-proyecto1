@@ -1,4 +1,9 @@
 .vscode/
 lib/
+<<<<<<< HEAD
 README.md
 bin/
+=======
+bin/
+README.md
+>>>>>>> emmanuel
