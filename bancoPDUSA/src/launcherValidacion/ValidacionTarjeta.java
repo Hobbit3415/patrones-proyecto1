@@ -1,4 +1,4 @@
-package launcher;
+package launcherValidacion;
 
 public class ValidacionTarjeta {
 	
@@ -41,7 +41,6 @@ public class ValidacionTarjeta {
 	    	for(int i=0; i<16; i++) {
 	    		sumaTotal = sumaTotal+numero[i];
 	    	}
-	    	System.out.print(sumaTotal);
 	    	
 	    	long fin = sumaTotal % 10;
 	    	if(fin == 0) {
