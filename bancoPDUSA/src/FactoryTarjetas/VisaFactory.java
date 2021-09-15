@@ -1,12 +1,13 @@
-package factory;
+package FactoryTarjetas;
 
 import producto.*;
 
 public class VisaFactory implements IAbstractFactoryTarjetas{
   @Override
-  public void generarDebitoVisa() {
+  public TarjetaDebito generarDebitoVisa() {
     TarjetaDebito tDeb = new TarjetaDebito();
     tDeb.setMarca("Visa");
+    return tDeb;
   }
 
   @Override
@@ -17,9 +18,10 @@ public class VisaFactory implements IAbstractFactoryTarjetas{
   }
 
   @Override
-  public void generarDebitoMastercard() {
-    TarjetaCredito tCred = new TarjetaCredito();
-    tCred.setMarca("Mastercard");    
+  public TarjetaDebito generarDebitoMastercard() {
+    TarjetaDebito tDeb = new TarjetaDebito();
+    tDeb.setMarca("Mastercard");
+    return tDeb;
   }
 
   @Override

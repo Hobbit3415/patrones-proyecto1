@@ -1,10 +1,7 @@
 package launcher;
 
-import factory.IAbstractFactoryTarjetas;
-import factory.MastercardFactory;
-import factory.VisaFactory;
-import producto.ITarjeta;
-import producto.TarjetaCredito;
+import FactoryTarjetas.*;
+import producto.*;
 
 public class LauncherFactoryTarjetas {
   
@@ -14,9 +11,12 @@ public class LauncherFactoryTarjetas {
     IAbstractFactoryTarjetas factoryVisa = new VisaFactory();
     IAbstractFactoryTarjetas factoryMaster = new MastercardFactory();
 
-    TarjetaCredito tarjetaMaster = factoryMaster.generarCreditoMastercard();
+    TarjetaCredito tarjetaCredMaster = factoryMaster.generarCreditoMastercard();
+    TarjetaDebito tarjetaDebMaster = factoryMaster.generarDebitoMastercard();
 
-    System.out.println(tarjetaMaster.toString());
+    System.out.println(tarjetaCredMaster.toString());
+    System.out.println(tarjetaDebMaster);
+    System.out.println("");
 
   }
 

@@ -1,14 +1,15 @@
-package factory;
+package FactoryTarjetas;
 
 import producto.TarjetaCredito;
+import producto.TarjetaDebito;
 
 public interface IAbstractFactoryTarjetas {
 
-  public void generarDebitoVisa();
+  public TarjetaDebito generarDebitoVisa();
 
   public TarjetaCredito generarCreditoVisa();
 
-  public void generarDebitoMastercard();
+  public TarjetaDebito generarDebitoMastercard();
 
   public TarjetaCredito generarCreditoMastercard();
 

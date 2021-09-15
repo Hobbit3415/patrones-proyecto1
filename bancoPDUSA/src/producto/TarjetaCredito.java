@@ -8,7 +8,7 @@ public class TarjetaCredito implements ITarjeta{
   private int cvv = 0;
   private String marca = "";
   private int tipo = 0;
-
+  
   public TarjetaCredito() {
     this.titular = "";
     this.numeroTarjeta = 0;
