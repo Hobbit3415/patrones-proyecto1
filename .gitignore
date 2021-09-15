@@ -1,9 +1,17 @@
 .vscode/
 lib/
 <<<<<<< HEAD
+<<<<<<< HEAD
 README.md
 bin/
 =======
 bin/
 README.md
 >>>>>>> emmanuel
+=======
+README.md
+.settings/
+bin/
+.classpath
+.project
+>>>>>>> Valentina
