@@ -6,7 +6,7 @@ import producto.CDT;
 import producto.CreditoRotativo;
 
 
-public class Launcher {
+public class LauncherProtorype {
 
 	public static void main (String[] args) throws CloneNotSupportedException{
 		
