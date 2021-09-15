@@ -25,3 +25,8 @@ patrones-proyecto1.iml
 >>>>>>> alexis
 >>>>>>> c55de8241b7f3c0355d05db940665ad7bc6e426b
 >>>>>>> 3c65d55054810f16a959e8140e6d12b3edf14a38
+.vscode/
+lib/
+bin/
+.classpath
+.project
