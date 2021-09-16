@@ -6,9 +6,9 @@ public interface ITarjeta {
 
   public void setTitular(String titular);
 
-  public int getNumeroTarjeta();
+  public long getNumeroTarjeta();
 
-  public void setNumeroTarjeta(int numeroTarjeta);
+  public void setNumeroTarjeta(long numeroTarjeta);
 
   public int getMesV();
 
