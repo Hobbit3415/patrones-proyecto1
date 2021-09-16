@@ -1,32 +1,52 @@
 package producto;
 
 public class TarjetaDebito implements ITarjeta {
-  private String titular = "";
-  private long numeroTarjeta = 0;
-  private int mesV = 0;
-  private int yearV = 0;
-  private int cvv = 0;
-  private String marca = "";
-  private int tipo = 0;
+  private int nCuenta;
+  private String titular;
+  private long numeroTarjeta;
+  private int mesV;
+  private int yearV;
+  private int cvv;
+  private String marca;
+  private String tipo;
 
   public TarjetaDebito() {
+    this.nCuenta = 0;
     this.titular = "";
     this.numeroTarjeta = 0;
     this.mesV = 0;
     this.yearV = 0;
     this.cvv = 0;
     this.marca = "";
-    this.tipo = 0;
+    this.tipo = "Debito";
   }
- 
-  public TarjetaDebito(String titular, long numeroTarjeta, int mesV, int yearV, int cvv, String marca, int tipo) {
+
+  public TarjetaDebito(int numeroCuenta, String titular, long numeroTarjeta, int mesV, int yearV, int cvv, String marca,
+      String tipo) {
+    this.nCuenta = 0;
     this.titular = titular;
     this.numeroTarjeta = numeroTarjeta;
     this.mesV = mesV;
     this.yearV = yearV;
     this.cvv = cvv;
     this.marca = marca;
-    this.tipo = 0;
+    this.tipo = "Debito";
+  }
+
+  public int getnCuenta() {
+    return nCuenta;
+  }
+
+  public void setnCuenta(int nCuenta) {
+    this.nCuenta = nCuenta;
+  }
+
+  public String getTipo() {
+    return tipo;
+  }
+
+  public void setTipo(String tipo) {
+    this.tipo = tipo;
   }
 
   public String getTitular() {
@@ -79,8 +99,8 @@ public class TarjetaDebito implements ITarjeta {
 
   @Override
   public String toString() {
-    return "TarjetaDebito [\ncvv=" + cvv + ", \nmarca=" + marca + ", \nmesV=" + mesV + ", \nnumeroTarjeta=" + numeroTarjeta
-        + ", \ntipo=" + tipo + ", \ntitular=" + titular + ", \nyearV=" + yearV + "\n]";
+    return "TarjetaDebito [\nTipo Tarjeta: " + tipo + "\nTitular: " + titular + "\nCuenta: " + nCuenta
+        + "\nNumero Tarjeta: " + numeroTarjeta + "\nCVV=" + cvv + "\nAño vencimiento: " + yearV + "\nMes vencimiento: " + mesV
+        + "\nMarca: " + marca + "\n]";
   }
-  
 }
