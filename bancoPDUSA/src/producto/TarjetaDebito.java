@@ -1,7 +1,7 @@
 package producto;
 
 public class TarjetaDebito implements ITarjeta {
-  private int nCuenta;
+  private String nCuenta;
   private String titular;
   private long numeroTarjeta;
   private int mesV;
@@ -11,7 +11,7 @@ public class TarjetaDebito implements ITarjeta {
   private String tipo;
 
   public TarjetaDebito() {
-    this.nCuenta = 0;
+    this.nCuenta = "";
     this.titular = "";
     this.numeroTarjeta = 0;
     this.mesV = 0;
@@ -21,9 +21,9 @@ public class TarjetaDebito implements ITarjeta {
     this.tipo = "Debito";
   }
 
-  public TarjetaDebito(int numeroCuenta, String titular, long numeroTarjeta, int mesV, int yearV, int cvv, String marca,
+  public TarjetaDebito(String numeroCuenta, String titular, long numeroTarjeta, int mesV, int yearV, int cvv, String marca,
       String tipo) {
-    this.nCuenta = 0;
+    this.nCuenta = "";
     this.titular = titular;
     this.numeroTarjeta = numeroTarjeta;
     this.mesV = mesV;
@@ -33,11 +33,11 @@ public class TarjetaDebito implements ITarjeta {
     this.tipo = "Debito";
   }
 
-  public int getnCuenta() {
+  public String getnCuenta() {
     return nCuenta;
   }
 
-  public void setnCuenta(int nCuenta) {
+  public void setnCuenta(String nCuenta) {
     this.nCuenta = nCuenta;
   }
 
