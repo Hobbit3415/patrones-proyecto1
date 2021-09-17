@@ -9,6 +9,7 @@ import FactoryTarjetas.IAbstractFactoryTarjetas;
 import FactoryTarjetas.MastercardFactory;
 import Interfaz.iCuenta;
 import model.PrototipoCDT;
+import model.PrototipoCRotativo;
 
 public class CuentaCorriente implements iCuenta {
 
@@ -23,6 +24,8 @@ public class CuentaCorriente implements iCuenta {
     Calendar date = new GregorianCalendar(2021, 9, 17);
     int year = date.get(Calendar.YEAR);
     double monto;
+    int cRotativo = 2000000;
+    int month = date.get(Calendar.MONTH);
 
     public CuentaCorriente(String nombre, int edad, boolean estado) {
         this.id = fabricaCuenta.generarNumCuenta();
@@ -48,8 +51,11 @@ public class CuentaCorriente implements iCuenta {
 
 
 	@Override
-    public double getCreditoRotativo() {
-        ;return 2000000;
+    public CreditoRotativo getCreditoRotativo() {
+
+        CreditoRotativo cr = new PrototipoCRotativo(cRotativo, month, 29, 0.02);
+
+        return cr;
     }
 
     @Override

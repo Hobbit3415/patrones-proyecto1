@@ -2,10 +2,11 @@ package Interfaz;
 
 import Externo.Usuario;
 import Producto.CDT;
+import Producto.CreditoRotativo;
 import Producto.Cuenta;
 
 public interface iCuenta {
-	double getCreditoRotativo();
+	CreditoRotativo getCreditoRotativo();
 
 	Usuario obtenerCuenta();
 
@@ -14,5 +15,7 @@ public interface iCuenta {
 	public CDT getCDT();
 
 	public double agregarDep(double monto);
+
+
 
 }

@@ -3,6 +3,8 @@ package model;
 
 import Producto.CreditoRotativo;
 
+import java.util.Calendar;
+
 public class PrototipoCRotativo extends CreditoRotativo {
 	
 	public PrototipoCRotativo(int cupo, int fecha, int plazo, double tasa) {

@@ -1,5 +1,7 @@
 package Producto;
 
+import java.util.Calendar;
+
 public abstract class CreditoRotativo implements Cloneable {
 	
 	
@@ -47,8 +49,8 @@ public abstract class CreditoRotativo implements Cloneable {
 
 	@Override
 	public String toString() {
-		return "CreditoRotativo [cupo=" + cupo + ", plazo=" + plazo + ", tasaFijaDesembolso=" + tasaFijaDesembolso
-				+ ", fechaPago=" + fechaPago + "]";
+		return "CreditoRotativo [cupo=" + cupo + ", Día de pago=" + plazo + ", tasaFijaDesembolso=" + tasaFijaDesembolso
+				+ ", Mes de pago=" + fechaPago + "]";
 	}
 	
 	

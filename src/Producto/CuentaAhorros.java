@@ -68,8 +68,8 @@ public class CuentaAhorros implements iCuenta {
 	}
 
 	@Override
-	public double getCreditoRotativo() {
-		return 0;
+	public CreditoRotativo getCreditoRotativo() {
+		return null;
 	}
 
 	@Override
