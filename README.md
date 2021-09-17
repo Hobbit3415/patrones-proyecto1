@@ -35,6 +35,14 @@ El programa se dividió en tres módulos, cada modulo implementa un patrón de d
 >> Creación de servicios (CDT y crédito rotativo) -- Patrón Prototype
 
 # **Diagrama de clases**
+* Módulo de creación de tarjetas:
 
-![diagramaClases](https://user-images.githubusercontent.com/36966781/118346550-1150c480-b502-11eb-92ae-54a264dd605b.png)
+> ![creacionTarjetas](https://user-images.githubusercontent.com/36966781/133848439-78ad59ae-9366-470d-b8b5-8635fe8847eb.png)
 
+* Módulo de creación de cuentas:
+
+> ![creacionCuentas](https://user-images.githubusercontent.com/36966781/133848460-72dd8a51-1217-4532-bf4d-de04b7044256.png)
+
+* Módulo de creación de servicios:
+
+> ![creacionServicios](https://user-images.githubusercontent.com/36966781/133848474-7d1b2091-d4ab-4d93-9c94-a9d30235ad7e.png)
