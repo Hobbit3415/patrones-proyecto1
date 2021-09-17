@@ -5,9 +5,14 @@ import Interfaz.iCuenta;
 import Producto.Cuenta;
 import Producto.CuentaAhorros;
 import Producto.CuentaCorriente;
+import Producto.TarjetaCredito;
+import Producto.TarjetaDebito;
 
 import java.util.ArrayList;
 import java.util.concurrent.ThreadLocalRandom;
+
+import FactoryTarjetas.IAbstractFactoryTarjetas;
+import FactoryTarjetas.MastercardFactory;
 
 
 public class FabricaCuenta {
@@ -34,9 +39,9 @@ public class FabricaCuenta {
     public iCuenta getCuenta (String nombre, int edad, boolean estado) {
         if (edad==18 && estado==false){
             listaCuentaAh.add(new CuentaAhorros(nombre, edad, estado));
+            
             return new CuentaAhorros(nombre, edad, estado);
-            //espacio de código para agregar los múltiples servicios y productos
-            //return lista (idea tentativa)
+            
         } else if (edad>18){
             return new CuentaCorriente(nombre, edad, estado);
         } else

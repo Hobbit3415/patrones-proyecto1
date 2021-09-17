@@ -20,14 +20,17 @@ public class Lanzador {
         Usuario u2 = new Usuario( "Pepe Sánchez", 21, false);
         Usuario u3 = new Usuario( "Arnulfo López", 19, true);
         Usuario u4 = new Usuario("Lord Leyvardo", 18, false);
-        Usuario u5 = new Usuario("Pepperoncino", 17, false);
+        Usuario u5 = new Usuario("Pepperoncino", 18, false);
         Usuario u6 = new Usuario( "Camaroncio", 54, true);
 
 
         FabricaCuenta fabricaCuenta = new FabricaCuenta();
-        iCuenta cuenta = fabricaCuenta.getCuenta(u1.getNombre(), u1.getEdad(), u1.getEsEmpleado());
+        iCuenta cuenta = fabricaCuenta.getCuenta(u5.getNombre(), u5.getEdad(), u5.getEsEmpleado());
+        iCuenta cuenta1 = fabricaCuenta.getCuenta(u1.getNombre(), u1.getEdad(), u1.getEsEmpleado());
 
         System.out.println(cuenta);
+        System.out.println(cuenta1);
+        System.out.println(cuenta1.getCreditoRotativo());
 
 
         //if (cuenta != null){

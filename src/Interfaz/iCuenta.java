@@ -8,5 +8,7 @@ public interface iCuenta {
     double getCreditoRotativo();
     Usuario obtenerCuenta();
 
+    
+    public double getCDT();
 
 }
