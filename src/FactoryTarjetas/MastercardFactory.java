@@ -6,7 +6,6 @@ import launcherValidacion.ValidacionTarjeta;
 public class MastercardFactory implements IAbstractFactoryTarjetas {
   
   int complemento = 0;
-  boolean v;
   
   @Override
   public TarjetaDebito generarDebitoVisa(String nCuenta, String titular) {
@@ -14,10 +13,10 @@ public class MastercardFactory implements IAbstractFactoryTarjetas {
     complemento = (int) (Math.random()*(999999999-100000000+1)+999999999);
     tDeb.setnCuenta(nCuenta);
     tDeb.setTitular(titular);
-    while(ValidacionTarjeta.getValidacionTarjeta(tDeb.getNumeroTarjeta())){
+    do{
       complemento = (int) (Math.random()*(999999999-100000000+1)+999999999);
       tDeb.setNumeroTarjeta(Long.valueOf("430014"+complemento));
-    }
+    }while(ValidacionTarjeta.getValidacionTarjeta(tDeb.getNumeroTarjeta())==false);
     tDeb.setMesV((int) (Math.random()*12));
     tDeb.setYearV(2024);
     tDeb.setCvv((int) (Math.random()*999-111));
@@ -30,10 +29,10 @@ public class MastercardFactory implements IAbstractFactoryTarjetas {
     TarjetaCredito tCred = new TarjetaCredito();
     tCred.setnCuenta(nCuenta);
     tCred.setTitular(titular);
-    while(ValidacionTarjeta.getValidacionTarjeta(tCred.getNumeroTarjeta())){
+    do{
       complemento = (int) (Math.random()*(999999999-100000000+1)+999999999);
       tCred.setNumeroTarjeta(Long.valueOf("430014"+complemento));
-    }
+    }while(ValidacionTarjeta.getValidacionTarjeta(tCred.getNumeroTarjeta())==false);
     tCred.setMesV((int) (Math.random()*12));
     tCred.setYearV(2024);
     tCred.setCvv((int) (Math.random()*999-111));
@@ -46,10 +45,10 @@ public class MastercardFactory implements IAbstractFactoryTarjetas {
     TarjetaDebito tDeb = new TarjetaDebito();
     tDeb.setnCuenta(nCuenta);
     tDeb.setTitular(titular);
-    while(ValidacionTarjeta.getValidacionTarjeta(tDeb.getNumeroTarjeta())){
+    do{
       complemento = (int) (Math.random()*(999999999-100000000+1)+999999999);
       tDeb.setNumeroTarjeta(Long.valueOf("430014"+complemento));
-    }
+    }while(ValidacionTarjeta.getValidacionTarjeta(tDeb.getNumeroTarjeta())==false);
     tDeb.setMesV((int) (Math.random()*12));
     tDeb.setYearV(2024);
     tDeb.setCvv((int) (Math.random()*999-111));
@@ -63,10 +62,10 @@ public class MastercardFactory implements IAbstractFactoryTarjetas {
     complemento = (int) (Math.random()*(999999999-100000000+1)+999999999);
     tCred.setnCuenta(nCuenta);
     tCred.setTitular(titular);
-    while(ValidacionTarjeta.getValidacionTarjeta(tCred.getNumeroTarjeta())){
+    do{
       complemento = (int) (Math.random()*(999999999-100000000+1)+999999999);
       tCred.setNumeroTarjeta(Long.valueOf("430014"+complemento));
-    }
+    }while(ValidacionTarjeta.getValidacionTarjeta(tCred.getNumeroTarjeta())==false);
     tCred.setMesV((int) (Math.random()*12));
     tCred.setYearV(2024);
     tCred.setCvv((int) (Math.random()*999-111));
