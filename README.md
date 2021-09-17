@@ -3,6 +3,8 @@
 
 - - -
 
+# **Para ejecutar el programa, ejecutar el Cliente.java del paquete Lanzador**
+
 # Problema
 El Banco PDUSA ha creado portafolios acordes a su público. Según el público objetivo ofrecerán un conjunto de productos con los cuales esperan mejorar el onboarding y retención de clientes.
 Se han dado cuenta que según la edad o condición laboral, la persona puede necesitar los productos acorde a su realidad, por tal razón, proponen que las personas que recién cumplen 18 años tendrán una cuenta de ahorros, una tarjeta débito con un límite por transacción de $200.000. La cuenta corriente estará deshabilitada. Tendrá una tarjeta de crédito básica con un cupo por  $1.000.000. El producto CDT estará disponible para iniciar un depósito a 5 años en el que puedan ir agregando dinero. El valor mínimo de apertura es de $1.000.000. No contará con crédito rotativo, pero para que el usuario sepa que este producto existe dirá que el crédito rotativo tiene un cupo de $0.
