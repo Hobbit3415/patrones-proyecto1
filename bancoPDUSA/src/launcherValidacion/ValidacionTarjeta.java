@@ -2,12 +2,11 @@ package launcherValidacion;
 
 public class ValidacionTarjeta {
 	
-	private static ValidacionTarjeta v;
-	
-	public static ValidacionTarjeta getValidacionTarjeta(long n) {
+	public static boolean getValidacionTarjeta(long n) {
 		
 		long[] digito = new long [16];
 		long[] numero = new long [16];
+		boolean f = false;
 		
 		int s = 15;
 		int cifras = 0;
@@ -19,9 +18,6 @@ public class ValidacionTarjeta {
 			s--;
 		}
 		
-		if(v == null){
-	      v = new ValidacionTarjeta();
-	    }
 	    
 	    if(cifras==16) {
 	    	int b=0;
@@ -45,15 +41,17 @@ public class ValidacionTarjeta {
 	    	long fin = sumaTotal % 10;
 	    	if(fin == 0) {
 	    		System.out.print("Número de tarjeta válido");
+	    		f = true;
 	    	}else {
 	    		System.out.print("Número de tarjeta NO valido");
+	    		f = false;
 	    	}
 	    	
 	    }else {
 	    	System.out.print("Los digitos de la tarjeta no tienen la dimensión correcta");
 	    }
 	    
-	    return v;
+	    return f;
 	  }
 
 	private static long dosdigitos(long variable) {

@@ -10,7 +10,7 @@ public class launcher {
 	    
 	    System.out.println("Ingrese el número de la tarjeta: ");
 	    numero = sc.nextLong();
-	    ValidacionTarjeta v = ValidacionTarjeta.getValidacionTarjeta(numero);
+	    boolean v = ValidacionTarjeta.getValidacionTarjeta(numero);
 	    System.out.println("\n");
 	    
 	  }
