@@ -40,15 +40,15 @@ public class ValidacionTarjeta {
 	    	
 	    	long fin = sumaTotal % 10;
 	    	if(fin == 0) {
-	    		System.out.print("Número de tarjeta válido");
+	    		System.out.print("Numero de tarjeta valido");
 	    		f = true;
 	    	}else {
-	    		System.out.print("Número de tarjeta NO valido");
+	    		System.out.print("Numero de tarjeta NO valido");
 	    		f = false;
 	    	}
 	    	
 	    }else {
-	    	System.out.print("Los digitos de la tarjeta no tienen la dimensión correcta");
+	    	System.out.print("Los digitos de la tarjeta no tienen la dimension correcta");
 	    }
 	    
 	    return f;

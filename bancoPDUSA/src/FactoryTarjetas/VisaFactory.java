@@ -1,6 +1,7 @@
 package FactoryTarjetas;
 
 import producto.*;
+import launcherValidacion.ValidacionTarjeta;
 
 public class VisaFactory implements IAbstractFactoryTarjetas{
 
@@ -12,7 +13,9 @@ public class VisaFactory implements IAbstractFactoryTarjetas{
     complemento = (int) (Math.random()*(999999999-100000000+1)+999999999);
     tDeb.setnCuenta(nCuenta);
     tDeb.setTitular(titular);
-    tDeb.setNumeroTarjeta(Long.valueOf("430014"+complemento));
+    while(!ValidacionTarjeta.getValidacionTarjeta(Integer.parseInt(nCuenta))){
+      tDeb.setNumeroTarjeta(Long.valueOf("430014"+complemento));
+    }
     tDeb.setMesV((int) (Math.random()*12));
     tDeb.setYearV(2024);
     tDeb.setCvv((int) (Math.random()*999-111));

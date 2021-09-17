@@ -8,7 +8,7 @@ public class launcher {
 	    Scanner sc = new Scanner(System.in);
 	    long numero;
 	    
-	    System.out.println("Ingrese el número de la tarjeta: ");
+	    System.out.println("Ingrese el numero de la tarjeta: ");
 	    numero = sc.nextLong();
 	    boolean v = ValidacionTarjeta.getValidacionTarjeta(numero);
 	    System.out.println("\n");
