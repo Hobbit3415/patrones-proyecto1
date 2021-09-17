@@ -7,6 +7,7 @@ public class TarjetaCredito implements ITarjeta {
   private int mesV;
   private int yearV;
   private int cvv;
+  private int cupo;
   private String marca;
   private String tipo;
 
@@ -17,20 +18,30 @@ public class TarjetaCredito implements ITarjeta {
     this.mesV = 0;
     this.yearV = 0;
     this.cvv = 0;
+    this.cupo = 0;
     this.marca = "";
     this.tipo = "Credito";
   }
 
   public TarjetaCredito(String numeroCuenta, String titular, Long numeroTarjeta, int mesV, int yearV, int cvv,
-      String marca, String tipo) {
+    int cupo , String marca, String tipo) {
     this.nCuenta = numeroCuenta;
     this.titular = titular;
     this.numeroTarjeta = numeroTarjeta;
     this.mesV = mesV;
     this.yearV = yearV;
     this.cvv = cvv;
+    this.cupo = cupo;
     this.marca = marca;
     this.tipo = "Credito";
+  }
+
+  public int getCupo() {
+    return cupo;
+  }
+
+  public void setCupo(int cupo) {
+    this.cupo = cupo;
   }
 
   public String getnCuenta() {
@@ -99,9 +110,9 @@ public class TarjetaCredito implements ITarjeta {
 
   @Override
   public String toString() {
-    return "TarjetaDebito [\nTipo Tarjeta: " + tipo + "\nTitular: " + titular + "\nCuenta: " + nCuenta
-        + "\nNumero Tarjeta: " + numeroTarjeta + "\nCVV=" + cvv + "\nAño vencimiento: " + yearV + "\nMes vencimiento: " + mesV
-        + "\nMarca: " + marca + "\n]";
+    return "TarjetaDebito [\n\tTipo Tarjeta: " + tipo + "\n\tTitular: " + titular + "\n\tCuenta: " + nCuenta
+        + "\n\tNumero Tarjeta: " + numeroTarjeta + "\n\tCVV=" + cvv + "\n\tAño vencimiento: " + yearV + "\n\tMes vencimiento: " + mesV
+        + "\n\tCupo: " + cupo +"\n\tMarca: " + marca + "\n]";
   }
 
 }
