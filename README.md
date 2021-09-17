@@ -1,6 +1,14 @@
 # Proyecto final corte 1 - Patrones de diseño de software
 ![Alt text](https://www.usergioarboleda.edu.co/wp-content/uploads/ultimatum/imagens/logo-mobile-UniversidadSergioArboleda.png)
 
+**Estudiantes:** 
+* Emmanuel Mora Mosquera
+* Jonathan Alexander Torres
+* Ruben Alexis Nuñez
+* Valentina Del Pilar Franco
+
+**Profesor:** Juan Sebastian Leyva
+
 - - -
 
 # **Para ejecutar el programa, ejecutar el Cliente.java del paquete Lanzador**
@@ -15,14 +23,6 @@ Las personas que ya pertenecen a mundo laboral, se ajustan a un perfil que tiene
 Se debe asegurar que el proceso de creación de portafolios sea siempre el mismo, pues ha sucedido que un por fallas en el proceso, el portafolio de un cliente no se crea correctamente. Para esto, es importante garantizar que en todos los clientes, la creación siga los mismos pasos.
 Se debe poder duplicar un producto en caso que el cliente solicite otro producto del mismo tipo. La duplicación se hace para poder reutilizar la información existente y modificar solamente los campos críticos, así el asesor gastará menos tiempo.
 El proceso de validación de tarjetas de crédito debe estar centralizado, puesto que se ha evidenciado fraude en la generación de estas tarjetas, por tal razón solamente una instancia debe validar estos números utilizando el algoritmo de Luhn.
-
-**Estudiantes:** 
-* Emmanuel Mora Mosquera
-* Jonathan Alexander Torres
-* Ruben Alexis Nuñez
-* Valentina Del Pilar Franco
-
-**Profesor:** Juan Sebastian Leyva
 
 # **Planteamiento**
 El programa se dividió en tres módulos, cada modulo implementa un patrón de diseño diferente
