@@ -30,3 +30,8 @@ lib/
 bin/
 .classpath
 .project
+.idea/
+bancoPDUSA/.idea/
+bancoPDUSA/out/
+bancoPDUSA/bancoPDUSA.iml
+
