@@ -13,7 +13,7 @@ public class VisaFactory implements IAbstractFactoryTarjetas{
     complemento = (int) (Math.random()*(999999999-100000000+1)+999999999);
     tDeb.setnCuenta(nCuenta);
     tDeb.setTitular(titular);
-    while(!ValidacionTarjeta.getValidacionTarjeta(Integer.parseInt(nCuenta))){
+    while(ValidacionTarjeta.getValidacionTarjeta(tDeb.getNumeroTarjeta())){
       tDeb.setNumeroTarjeta(Long.valueOf("430014"+complemento));
     }
     tDeb.setMesV((int) (Math.random()*12));
@@ -29,7 +29,9 @@ public class VisaFactory implements IAbstractFactoryTarjetas{
     complemento = (int) (Math.random()*(999999999-100000000+1)+999999999);
     tCred.setnCuenta(nCuenta);
     tCred.setTitular(titular);
-    tCred.setNumeroTarjeta(Long.valueOf("430014"+complemento));
+    while(ValidacionTarjeta.getValidacionTarjeta(tCred.getNumeroTarjeta())){
+      tCred.setNumeroTarjeta(Long.valueOf("430014"+complemento));
+    }
     tCred.setMesV((int) (Math.random()*12));
     tCred.setYearV(2024);
     tCred.setCvv((int) (Math.random()*999-111));
@@ -43,7 +45,9 @@ public class VisaFactory implements IAbstractFactoryTarjetas{
     complemento = (int) (Math.random()*(999999999-100000000+1)+999999999);
     tDeb.setnCuenta(nCuenta);
     tDeb.setTitular(titular);
-    tDeb.setNumeroTarjeta(Long.valueOf("430014"+complemento));
+    while(ValidacionTarjeta.getValidacionTarjeta(tDeb.getNumeroTarjeta())){
+      tDeb.setNumeroTarjeta(Long.valueOf("430014"+complemento));
+    }
     tDeb.setMesV((int) (Math.random()*12));
     tDeb.setYearV(2024);
     tDeb.setCvv((int) (Math.random()*999-111));
@@ -57,7 +61,9 @@ public class VisaFactory implements IAbstractFactoryTarjetas{
     complemento = (int) (Math.random()*(999999999-100000000+1)+999999999);
     tCred.setnCuenta(nCuenta);
     tCred.setTitular(titular);
-    tCred.setNumeroTarjeta(Long.valueOf("430014"+complemento));
+    while(ValidacionTarjeta.getValidacionTarjeta(tCred.getNumeroTarjeta())){
+      tCred.setNumeroTarjeta(Long.valueOf("430014"+complemento));
+    }
     tCred.setMesV((int) (Math.random()*12));
     tCred.setYearV(2024);
     tCred.setCvv((int) (Math.random()*999-111));
