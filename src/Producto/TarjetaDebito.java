@@ -7,6 +7,7 @@ public class TarjetaDebito implements ITarjeta {
   private int mesV;
   private int yearV;
   private int cvv;
+  private int saldo;
   private String marca;
   private String tipo;
 
@@ -17,20 +18,30 @@ public class TarjetaDebito implements ITarjeta {
     this.mesV = 0;
     this.yearV = 0;
     this.cvv = 0;
+    this.saldo = 0;
     this.marca = "";
     this.tipo = "Debito";
   }
 
   public TarjetaDebito(String numeroCuenta, String titular, long numeroTarjeta, int mesV, int yearV, int cvv, String marca,
-      String tipo) {
+      int saldo, String tipo) {
     this.nCuenta = "";
     this.titular = titular;
     this.numeroTarjeta = numeroTarjeta;
     this.mesV = mesV;
     this.yearV = yearV;
     this.cvv = cvv;
+    this.saldo = saldo;
     this.marca = marca;
     this.tipo = "Debito";
+  }
+
+  public int getSaldo() {
+    return saldo;
+  }
+
+  public void setSaldo(int saldo) {
+    this.saldo = saldo;
   }
 
   public String getnCuenta() {
@@ -99,8 +110,8 @@ public class TarjetaDebito implements ITarjeta {
 
   @Override
   public String toString() {
-    return "TarjetaDebito [\nTipo Tarjeta: " + tipo + "\nTitular: " + titular + "\nCuenta: " + nCuenta
-        + "\nNumero Tarjeta: " + numeroTarjeta + "\nCVV=" + cvv + "\nAño vencimiento: " + yearV + "\nMes vencimiento: " + mesV
-        + "\nMarca: " + marca + "\n]";
+    return "TarjetaDebito [\n\tTipo Tarjeta: " + tipo + "\n\tTitular: " + titular + "\n\tCuenta: " + nCuenta
+        + "\n\tNumero Tarjeta: " + numeroTarjeta + "\n\tCVV=" + cvv + "\n\tAño vencimiento: " + yearV + "\n\tMes vencimiento: " + mesV
+        + "\n\tSaldo: " + saldo +"\n\tMarca: " + marca + "\n]";
   }
 }
