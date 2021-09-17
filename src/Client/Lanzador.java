@@ -13,7 +13,7 @@ import java.util.Scanner;
 
 public class Lanzador {
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException, CloneNotSupportedException {
 
         //Quemando los datos.
         Usuario u1 = new Usuario( "Brayan Pérez", 27, true); //true empleado, false des
@@ -27,16 +27,29 @@ public class Lanzador {
         FabricaCuenta fabricaCuenta = new FabricaCuenta();
         iCuenta cuenta = fabricaCuenta.getCuenta(u5.getNombre(), u5.getEdad(), u5.getEsEmpleado());
         iCuenta cuenta1 = fabricaCuenta.getCuenta(u1.getNombre(), u1.getEdad(), u1.getEsEmpleado());
-
-        System.out.println(cuenta);
-        System.out.println(cuenta1);
-        System.out.println(cuenta1.getCreditoRotativo());
-
-
-        //if (cuenta != null){
-          //  System.out.println(cuenta.toString()+ " ");
-        //} else {
-          //  System.out.println("Tipo de cuenta invalida ");
-        //}
+        
+        //cuenta.agregarDeposito(20000);
+        cuenta1.abrirCDT(1500000);
+        //cuenta1.agregarDep(780000);
+        System.out.println(cuenta1.getCDT().getMonto()); 
+        //cuenta.agregarDeposito(21500000);
+        System.out.println(cuenta1.getCDT().clone()); 
+        
+        System.out.println(cuenta1.getCDT().getDuracion());
+        //System.out.println();
+        //cuenta.getCDT(1200000).
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     }
 }

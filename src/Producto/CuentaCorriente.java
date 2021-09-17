@@ -8,6 +8,7 @@ import Fabrica.FabricaCuenta;
 import FactoryTarjetas.IAbstractFactoryTarjetas;
 import FactoryTarjetas.MastercardFactory;
 import Interfaz.iCuenta;
+import model.PrototipoCDT;
 
 public class CuentaCorriente implements iCuenta {
 
@@ -21,6 +22,7 @@ public class CuentaCorriente implements iCuenta {
     TarjetaDebito td = new TarjetaDebito();
     Calendar date = new GregorianCalendar(2021, 9, 17);
     int year = date.get(Calendar.YEAR);
+    double monto;
 
     public CuentaCorriente(String nombre, int edad, boolean estado) {
         this.id = fabricaCuenta.generarNumCuenta();
@@ -68,11 +70,25 @@ public class CuentaCorriente implements iCuenta {
 
 
 
-	@Override
-	public double getCDT() {
-	
-		return 1;
+    @Override
+	public CDT getCDT() {
+		double deposito = abrirCDT(monto);
+		CDT pt = new PrototipoCDT(deposito); 
+		return pt;
 	}
+
+	@Override
+	public double abrirCDT(double monto) {
+		
+		this.monto = monto;
+		return monto;
+	}
+
+	@Override
+	public double agregarDep(double monto) {
+		this.monto+=monto;
+		return monto;
+	} 
 	
 }
 
